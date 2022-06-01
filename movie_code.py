@@ -10,7 +10,7 @@ class movies:
         return [vid.title for vid in self.ranking_list[:11]]
 
 
-# class to hold movie data and methods to plan movie.
+# class to hold movie data and methods to play movie.
 class movie(movies):
     # create move and add movie to movies list
     def __init__(self, title=None):
