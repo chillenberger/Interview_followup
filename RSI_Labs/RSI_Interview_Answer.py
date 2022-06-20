@@ -24,7 +24,7 @@ class answerClass:
         above = 0
         below = 0
 
-        # iterate through all values in give vals to determin if above or below
+        # iterate through all values in give vals to determine if above or below
         # compare value, if val == compare do nothing.
         for val in vals:
             if val > compare:
