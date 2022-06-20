@@ -1,11 +1,10 @@
+# simple tests to veify answerClass is working correctly. 
+
 import unittest # for building test cases
-from RSI_Interview_question import answerClass
+from RSI_Interview_Answer import answerClass
 
 # class to hold aboveBelow method test cases
 class aboveBelowTesting(unittest.TestCase):
-
-    def setUp(self):
-        pass
 
     def test_example(self):
         rsp = answerClass.aboveBelow([1,5,2,1,10], 6)
@@ -18,7 +17,7 @@ class aboveBelowTesting(unittest.TestCase):
     def test_badInput(self):
         with self.assertRaises(Exception):
             answerClass.aboveBelow()
-            answerClass.aboveBelow([],)
+            answerClass.aboveBelow([])
             answerClass.aboveBelow([1,2,3,4], 1.2)
 
 # class to hold stringRotaiton test cases.
@@ -38,8 +37,9 @@ class stringRotationTesting(unittest.TestCase):
         rsp = answerClass.stringRotation('MyString', 0)
         self.assertEqual(rsp, 'MyString')
         with self.assertRaises(Exception):
-            answerClass.stringRotaiton()
-            answerClass.stringRotaiton('MyString')
+            answerClass.stringRotation()
+            answerClass.stringRotation('MyString')
+            answerClass.stringRotation('MyString', -2)
 
 if __name__ == '__main__':
     unittest.main()

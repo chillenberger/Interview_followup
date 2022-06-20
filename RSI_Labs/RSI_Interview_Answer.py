@@ -17,8 +17,8 @@ class answerClass:
             raise Exception('Must include list for comparison')
         if compare is None:
             raise Exception('Must include a value to compare list to')
-        elif isinstance(compare, int):
-            raise Exception('compare must be an integer')
+        elif not isinstance(compare, int):
+            raise Exception('Compare must be an integer')
 
         # initiate above and below values
         above = 0
@@ -35,7 +35,7 @@ class answerClass:
         # return found count it required format.
         return {'above': above, 'below': below}
 
-    # Takes a string to rotate and an offset to rotate it by and returns the
+    # Takes a string to rotate and an offset to rotate it by and returns a new
     # rotated string
     # time complexity O(n) where n is string length
     # return new string so space complexity is O(n) where n is string length
@@ -44,6 +44,8 @@ class answerClass:
         # raise exception if bad input
         if not isinstance(stringToRotate, str):
             raise Exception('Must include string to rotate')
+        if offSet < 0:
+            raise Exception('offSet must be positive integer')
         # ensures new string returned if no rotation occures.
         if offSet == 0 or not stringToRotate:
             return ''.join([x for x in stringToRotate])
