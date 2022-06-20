@@ -14,9 +14,11 @@ class answerClass:
         # Raise exception if user failed to include vals or compare since instructions
         # did not tell us explicitly what to do if this occures.
         if not isinstance(vals, list):
-            raise Exception
+            raise Exception('Must include list for comparison')
         if compare is None:
             raise Exception('Must include a value to compare list to')
+        elif isinstance(compare, int):
+            raise Exception('compare must be an integer')
 
         # initiate above and below values
         above = 0
