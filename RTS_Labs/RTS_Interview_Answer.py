@@ -1,4 +1,4 @@
-# Answers to RTS Labs initial code test.
+# Answers to RSI Labs initial code test. 
 
 
 # Class to hold answers to interview questions
